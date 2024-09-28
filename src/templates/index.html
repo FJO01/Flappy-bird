@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Settings Panel -->
+        <div id="settings">
+            <h3>Game Settings</h3>
+            <label for="gravity">Gravity:</label>
+            <input type="range" id="gravity" min="0.2" max="1.5" step="0.1" value="0.6">
+            
+            <label for="pipe-speed">Pipe Speed:</label>
+            <input type="range" id="pipe-speed" min="1" max="5" step="0.5" value="2">
+            
+            <label for="pipe-gap">Pipe Gap:</label>
+            <input type="range" id="pipe-gap" min="50" max="150" step="10" value="100">
+        </div>
+
+        <!-- Game Canvas and Score -->
+        <div id="canvas-wrapper">
+            <canvas id="flappyCanvas"></canvas>
+            <h2 id="score">Score: 0</h2>
+        </div>
+        
+        <!-- Start Button -->
+        <div id="start-button-container">
+            <button id="start-game">Start Game</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>

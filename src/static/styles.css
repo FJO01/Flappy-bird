@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #70c5ce;
+}
+
+#game-container {
+    display: flex;
+    position: relative;
+}
+
+#canvas-wrapper {
+    position: relative;
+}
+
+/* Center the canvas */
+canvas {
+    border: 2px solid black;
+    background-color: #fff;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+/* Move settings panel to the left */
+#settings {
+    position: absolute;
+    left: -200px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 2px solid #333;
+    padding: 10px;
+    border-radius: 10px;
+    width: 180px;
+}
+
+#settings label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#settings input[type="range"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Start button styling */
+#start-button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#start-game {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#start-game:hover {
+    background-color: #27ae60;
+}
+
+/* Hide start button after game starts */
+#start-button-container.hidden {
+    display: none;
+}
